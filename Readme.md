@@ -1,5 +1,7 @@
 # Generic test generator
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kristianmandrup/generic-test-generator.svg)](https://greenkeeper.io/)
+
 Similar to [test-generator](https://www.npmjs.com/package/test-generator) but more customizable so you can make it work with whatever test, mocking and assertion libraries that suit you best.
 
 ## Usage
