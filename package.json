@@ -1,0 +1,55 @@
+{
+  "name": "generic-test-generator",
+  "version": "1.0.0",
+  "description": "Generic test generator",
+  "author": "Kristian Mandrup <kmandrup@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/kristianmandrup/test-generator.git"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "test": "nyc ava",
+    "build:prod": "webpack --progress --colors --display-error-details --env=prod",
+    "build:dev": "webpack --progress --colors --display-error-details --env=dev"
+  },
+  "engine": [
+    "node >=7.0.0"
+  ],
+  "keywords": [
+    "test",
+    "generator",
+    "mocks"
+  ],
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "babili": "^0.1.4",
+    "babili-webpack-plugin": "^0.1.2",
+    "nock": "^9.0.22",
+    "nyc": "^11.2.1",
+    "supertest": "^3.0.0"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.test.js"
+    ],
+    "concurrency": 1,
+    "failFast": true,
+    "failWithoutAssertions": false,
+    "tap": true,
+    "powerAssert": false,
+    "require": [
+      "babel-register",
+      "babel-polyfill"
+    ],
+    "babel": "inherit"
+  },
+  "license": "MIT"
+}
